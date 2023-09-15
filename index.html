@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col items-center justify-center"
+  >
+    <div class="bg-white rounded-lg p-6 shadow-md w-full sm:w-96 text-center">
+      <h1 class="text-2xl font-semibold mb-4">Guess a Number</h1>
+      <form id="guess-form" class="mb-6">
+        <input
+          type="text"
+          id="inputNum"
+          class="border border-gray-300 p-2 w-full rounded-md focus:outline-none"
+          placeholder="Guess a number..."
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-4 mt-4 rounded-md hover:bg-blue-600 focus:outline-none"
+        >
+          Submit Guess
+        </button>
+      </form>
+      <div class="text-left">
+        <p>
+          Previous Guesses: <span id="guesses" class="font-semibold"></span>
+        </p>
+        <p>
+          Remaining Attempts:
+          <span id="attempts-left" class="font-semibold">10</span>
+        </p>
+        <p class="text-red-500 font-semibold" id="low-or-high"></p>
+      </div>
+      <div class="mt-4">
+        <button
+          id="new-game-btn"
+          class="bg-yellow-400 text-white py-2 px-4 rounded-md hover:bg-yellow-500 focus:outline-none"
+        >
+          Start New Game
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
